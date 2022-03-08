@@ -1,4 +1,5 @@
 from django.db import models
+from django.shortcuts import reverse
 from django.contrib.auth.models import User
 from django.db.models import Sum
 
@@ -54,6 +55,14 @@ class Post(models.Model):
 
     def preview(self):
         return self.text[:123] + '...'
+
+    def __str__(self):
+        return '{}'.format(self.title)
+
+    class Meta:
+        verbose_name = 'News'
+        verbose_name_plural = 'News'
+        ordering = ['-dateCreation']
 
 
 class PostCategory(models.Model):
