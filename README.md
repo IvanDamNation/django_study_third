@@ -1,4 +1,4 @@
-# django_study_second
+# django_study_third
 
 My third practice project in Django and HTML
 
